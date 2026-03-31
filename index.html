@@ -151,11 +151,11 @@
     }
 
     .hero{
-      padding:54px;
+      padding:60px 58px;
       border-radius:36px;
       display:grid;
       grid-template-columns:1.15fr .85fr;
-      gap:36px;
+      gap:42px;
       overflow:hidden;
       position:relative;
     }
@@ -169,42 +169,12 @@
       pointer-events:none;
     }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:9px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(19,32,51,.08);
-      color:#496180;
-      font-size:.78rem;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      margin-bottom:18px;
-    }
-
-    .eyebrow .pulse{
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:linear-gradient(135deg, #79dca7, #7fa7ff);
-      box-shadow:0 0 0 8px rgba(121,220,167,.12);
-      animation:pulse 2.2s ease-in-out infinite;
-    }
-
-    @keyframes pulse{
-      0%,100%{transform:scale(1);opacity:1}
-      50%{transform:scale(.72);opacity:.55}
-    }
-
     h1{
-      font-size:clamp(2.7rem, 6.6vw, 5.1rem);
-      line-height:1;
+      font-size:clamp(2.5rem, 6vw, 4.7rem);
+      line-height:1.02;
       letter-spacing:-0.06em;
-      max-width:760px;
-      margin-bottom:22px;
+      max-width:720px;
+      margin-bottom:18px;
     }
 
     .serif{
@@ -230,15 +200,16 @@
 
     .hero-copy p{
       color:var(--muted);
-      font-size:1.08rem;
-      max-width:660px;
+      font-size:1.04rem;
+      max-width:620px;
+      line-height:1.75;
     }
 
     .hero-actions{
       display:flex;
       flex-wrap:wrap;
       gap:12px;
-      margin-top:30px;
+      margin-top:24px;
     }
 
     .btn{
@@ -271,11 +242,11 @@
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
       gap:16px;
-      margin-top:34px;
+      margin-top:30px;
     }
 
     .metric{
-      padding:18px 16px;
+      padding:20px 18px;
       border-radius:24px;
       background:rgba(255,255,255,.7);
       border:1px solid rgba(255,255,255,.7);
@@ -299,13 +270,13 @@
 
     .hero-stack{
       display:grid;
-      gap:18px;
+      gap:16px;
       align-content:center;
     }
 
     .floating-card{
       position:relative;
-      padding:24px;
+      padding:22px;
       border-radius:28px;
       background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.68));
       border:1px solid rgba(255,255,255,.7);
@@ -373,7 +344,7 @@
     }
 
     .section-head h2{
-      font-size:clamp(2rem, 4vw, 3rem);
+      font-size:clamp(1.9rem, 3.5vw, 2.7rem);
       letter-spacing:-0.05em;
       line-height:1;
       margin-bottom:6px;
@@ -396,13 +367,13 @@
     .projects-grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
-      gap:18px;
+      gap:20px;
     }
 
     .project-card{
       grid-column:span 6;
-      padding:24px;
-      min-height:270px;
+      padding:28px;
+      min-height:300px;
       border-radius:28px;
       background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.7));
       border:1px solid rgba(255,255,255,.75);
@@ -428,11 +399,12 @@
 
     .project-card.feature{
       grid-column:span 7;
-      min-height:320px;
+      min-height:340px;
     }
 
     .project-card.tall{
       grid-column:span 5;
+      min-height:340px;
     }
 
     .project-card::before{
@@ -456,7 +428,7 @@
       align-items:center;
       justify-content:space-between;
       gap:12px;
-      margin-bottom:20px;
+      margin-bottom:24px;
     }
 
     .project-badge{
@@ -479,23 +451,25 @@
     }
 
     .project-card h3{
-      font-size:1.65rem;
+      font-size:1.78rem;
       letter-spacing:-0.05em;
-      margin-bottom:10px;
+      margin-bottom:12px;
       max-width:420px;
+      line-height:1.05;
     }
 
     .project-card p{
       color:var(--muted);
       max-width:520px;
-      font-size:.97rem;
+      font-size:1rem;
+      line-height:1.72;
     }
 
     .project-tags{
       display:flex;
       flex-wrap:wrap;
       gap:8px;
-      margin-top:18px;
+      margin-top:22px;
     }
 
     .project-tags span{
@@ -508,7 +482,7 @@
     }
 
     .project-link{
-      margin-top:20px;
+      margin-top:24px;
       display:inline-flex;
       align-items:center;
       gap:10px;
@@ -653,7 +627,7 @@
       .shell{width:min(100% - 18px, var(--max));margin:12px auto 24px}
       nav,.hero,section,.footer{padding:20px}
       .nav-links{display:none}
-      h1{font-size:clamp(2.5rem, 14vw, 4rem)}
+      h1{font-size:clamp(2.35rem, 13vw, 3.8rem)}
       .hero-meta{grid-template-columns:1fr}
       .section-head{flex-direction:column;align-items:flex-start}
     }
@@ -687,14 +661,13 @@
 
     <header class="hero glass reveal">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span>Open to opportunities in Los Angeles</div>
         <h1>
           Building
-          <span class="serif gradient-text">thoughtful data products</span>
-          with a polished touch.
+          <span class="serif gradient-text">data systems and analytics</span>
+          that turn signals into decisions.
         </h1>
         <p>
-          M.S. Analytics at USC. I design data tools, AI-powered workflows, and product experiences that feel both useful and beautifully put together.
+          M.S. Analytics at USC. I build data pipelines, dashboards, workflow automation, and analytics applications that make operational data reliable, understandable, and genuinely useful.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">See Projects</a>
@@ -707,11 +680,11 @@
           </div>
           <div class="metric">
             <strong data-count="20">0</strong>
-            <span>Tools & Tech</span>
+            <span>Data Tools</span>
           </div>
           <div class="metric">
             <strong data-count="2">0</strong>
-            <span>Core Roles</span>
+            <span>Core Focus Areas</span>
           </div>
         </div>
       </div>
@@ -720,7 +693,7 @@
         <div class="floating-card">
           <div class="mini-label">Now Featuring</div>
           <h3>AutoML Command Center</h3>
-          <p>A sleek orchestration layer for end-to-end ML workflows, experiments, and deployment-ready decisioning.</p>
+          <p>An orchestration layer for ML workflows, experiment tracking, and deployment-ready decision support across the model lifecycle.</p>
           <div class="chip-row">
             <span class="chip">AI agents</span>
             <span class="chip">MLflow</span>
@@ -728,14 +701,14 @@
           </div>
         </div>
         <div class="floating-card">
-          <div class="mini-label">Design Direction</div>
-          <h3>Soft glass, bright gradients, playful motion</h3>
-          <p>Clean layouts, subtle depth, and animated details inspired by premium product pages.</p>
+          <div class="mini-label">Core Strength</div>
+          <h3>Data engineering with clear analytical storytelling</h3>
+          <p>From ingestion and transformation to dashboards and decision-ready outputs, I focus on systems that are as useful as they are polished.</p>
         </div>
         <div class="floating-card">
           <div class="mini-label">What I Build</div>
-          <h3>Analytics systems that feel like products</h3>
-          <p>Dashboards, intelligent assistants, pipelines, and interfaces that turn complexity into clarity.</p>
+          <h3>Pipelines, dashboards, and intelligent data tools</h3>
+          <p>Projects grounded in SQL, Python, workflow orchestration, and analytics UX that help people act on data faster.</p>
         </div>
       </div>
     </header>
@@ -744,19 +717,19 @@
       <div class="section-head reveal">
         <div>
           <div class="section-kicker">Selected Work</div>
-          <h2>Five projects, front and center.</h2>
+          <h2>Projects rooted in analytics and data engineering.</h2>
         </div>
-        <p>Each build blends engineering depth with product thinking, and every card links directly to the live experience.</p>
+        <p>These projects highlight data pipelines, analytical interfaces, automation, and decision-support systems built for real workflows.</p>
       </div>
 
       <div class="projects-grid">
         <a class="project-card feature" href="https://auto-ml-command-center.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(127,167,255,.45);">
           <div class="project-top">
-            <div class="project-badge">AI + ML Platform</div>
+            <div class="project-badge">ML Operations Platform</div>
             <div class="project-index">01</div>
           </div>
           <h3>AutoML Command Center</h3>
-          <p>An end-to-end command center for dataset upload, training orchestration, experiment comparison, and agent-assisted model workflows with a product-like control room feel.</p>
+          <p>An end-to-end ML operations workspace for dataset intake, model training, experiment comparison, and agent-assisted orchestration across the full analytics pipeline.</p>
           <div class="project-tags">
             <span>Next.js</span><span>FastAPI</span><span>MLflow</span><span>Redis</span><span>PostgreSQL</span>
           </div>
@@ -765,11 +738,11 @@
 
         <a class="project-card tall" href="https://frontend-chi-five-tourhxrkfk.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(255,199,216,.48);">
           <div class="project-top">
-            <div class="project-badge">Cute Productivity AI</div>
+            <div class="project-badge">Personal Data Assistant</div>
             <div class="project-index">02</div>
           </div>
           <h3>PocketPal</h3>
-          <p>A friendly AI companion for habits, preferences, and everyday productivity with modular flows, memory, and a more personal assistant vibe.</p>
+          <p>A personal assistant experience that organizes habits, preferences, and routines through structured workflows, memory, and lightweight data-driven recommendations.</p>
           <div class="project-tags">
             <span>FastAPI</span><span>React</span><span>RAG</span><span>LangChain</span>
           </div>
@@ -782,7 +755,7 @@
             <div class="project-index">03</div>
           </div>
           <h3>Job Market Intelligence</h3>
-          <p>A job-market intelligence dashboard that transforms raw posting data into role trends, skill demand signals, and hiring insights recruiters and candidates can actually use.</p>
+          <p>A labor-market analytics dashboard that transforms job posting data into role trends, skill demand patterns, and hiring insights through a clean exploratory interface.</p>
           <div class="project-tags">
             <span>Python</span><span>SQL</span><span>Pandas</span><span>D3.js</span>
           </div>
@@ -795,7 +768,7 @@
             <div class="project-index">04</div>
           </div>
           <h3>Price Intelligence</h3>
-          <p>A pipeline-first pricing product that monitors marketplace signals, tracks anomalies, and turns competitive pricing data into reliable operating intelligence.</p>
+          <p>A pricing analytics pipeline that tracks marketplace movement, surfaces anomalies, and converts competitive product data into dependable business intelligence.</p>
           <div class="project-tags">
             <span>Airflow</span><span>dbt</span><span>BigQuery</span><span>Slack Alerts</span>
           </div>
@@ -808,7 +781,7 @@
             <div class="project-index">05</div>
           </div>
           <h3>DataForge</h3>
-          <p>A polished data tooling experience focused on transforming raw inputs into structured, analysis-ready assets with a builder-friendly workflow and crisp interface.</p>
+          <p>A data tooling platform focused on turning raw inputs into clean, structured, analysis-ready assets through a workflow that feels efficient and easy to trust.</p>
           <div class="project-tags">
             <span>Data Workflows</span><span>Product UX</span><span>Web App</span>
           </div>
@@ -829,7 +802,7 @@
       <div class="bento">
         <div class="panel">
           <h3>Core stack</h3>
-          <p>Data engineering, analytics, automation, and applied AI across modern cloud-first tooling.</p>
+          <p>Data engineering, analytics, reporting, and automation across the modern cloud and warehouse stack.</p>
           <div class="skill-list">
             <span>Python</span><span>SQL</span><span>BigQuery</span><span>Snowflake</span><span>dbt</span>
             <span>Airflow</span><span>FastAPI</span><span>PostgreSQL</span><span>MLflow</span><span>Next.js</span>
@@ -838,9 +811,9 @@
 
         <div class="panel">
           <h3>Product qualities</h3>
-          <p>The best portfolio pieces feel engineered and designed. I care about clarity, responsiveness, and detail, not just functionality.</p>
+          <p>I care about trustworthy metrics, readable interfaces, and systems that help teams move from raw data to confident decisions.</p>
           <div class="soft-list">
-            <span>Thoughtful UX</span><span>Storytelling</span><span>Data clarity</span><span>Reliable systems</span><span>Playful polish</span>
+            <span>Data clarity</span><span>Dashboard UX</span><span>Reliable systems</span><span>Analytical storytelling</span><span>Decision support</span>
           </div>
         </div>
       </div>
