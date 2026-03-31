@@ -399,12 +399,12 @@
 
     .project-card.feature{
       grid-column:span 7;
-      min-height:340px;
+      min-height:380px;
     }
 
     .project-card.tall{
       grid-column:span 5;
-      min-height:340px;
+      min-height:380px;
     }
 
     .project-card::before{
@@ -460,9 +460,9 @@
 
     .project-card p{
       color:var(--muted);
-      max-width:520px;
-      font-size:1rem;
-      line-height:1.72;
+      max-width:560px;
+      font-size:.98rem;
+      line-height:1.68;
     }
 
     .project-tags{
@@ -719,71 +719,71 @@
           <div class="section-kicker">Selected Work</div>
           <h2>Projects rooted in analytics and data engineering.</h2>
         </div>
-        <p>These projects highlight data pipelines, analytical interfaces, automation, and decision-support systems built for real workflows.</p>
+        <p>These projects highlight production-style data systems, analytics workflows, experimentation platforms, and deployable tools with clear technical scope.</p>
       </div>
 
       <div class="projects-grid">
-        <a class="project-card feature" href="https://auto-ml-command-center.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(127,167,255,.45);">
+        <a class="project-card feature" href="https://dataforge-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(186,196,255,.44);">
           <div class="project-top">
-            <div class="project-badge">ML Operations Platform</div>
+            <div class="project-badge">Unified Microservices Platform</div>
             <div class="project-index">01</div>
           </div>
-          <h3>AutoML Command Center</h3>
-          <p>An end-to-end ML operations workspace for dataset intake, model training, experiment comparison, and agent-assisted orchestration across the full analytics pipeline.</p>
+          <h3>DataForge</h3>
+          <p>A unified platform that combines 10 data tools into a single deployable product with a polished frontend, including CSV Schema Validator, SQL Query Analyzer, Data Quality Monitor, REST-to-Database Sync, Auto EDA Reporter, S3 Data Lakehouse Organizer, Metric Definition Registry, Pipeline DAG Visualizer, Log Anomaly Detector, and a Slack KPI Daily Digest Bot.</p>
           <div class="project-tags">
-            <span>Next.js</span><span>FastAPI</span><span>MLflow</span><span>Redis</span><span>PostgreSQL</span>
+            <span>Next.js 14</span><span>FastAPI</span><span>Pandas</span><span>Pydantic</span><span>SQLite</span><span>Vercel</span><span>Render</span>
           </div>
           <div class="project-link">Visit live site →</div>
         </a>
 
-        <a class="project-card tall" href="https://frontend-chi-five-tourhxrkfk.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(255,199,216,.48);">
+        <a class="project-card tall" href="https://auto-ml-command-center.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(127,167,255,.45);">
           <div class="project-top">
-            <div class="project-badge">Personal Data Assistant</div>
+            <div class="project-badge">ML Experiment Platform</div>
             <div class="project-index">02</div>
           </div>
-          <h3>PocketPal</h3>
-          <p>A personal assistant experience that organizes habits, preferences, and routines through structured workflows, memory, and lightweight data-driven recommendations.</p>
+          <h3>AutoML Command Center</h3>
+          <p>An ML experiment platform where a ReAct-style AI agent accepts natural language instructions and orchestrates the entire pipeline from dataset intake and training to comparison and deployment workflows.</p>
           <div class="project-tags">
-            <span>FastAPI</span><span>React</span><span>RAG</span><span>LangChain</span>
-          </div>
-          <div class="project-link">Visit live site →</div>
-        </a>
-
-        <a class="project-card" href="https://tech-job-market-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(184,239,217,.55);">
-          <div class="project-top">
-            <div class="project-badge">Labor Market Analytics</div>
-            <div class="project-index">03</div>
-          </div>
-          <h3>Job Market Intelligence</h3>
-          <p>A labor-market analytics dashboard that transforms job posting data into role trends, skill demand patterns, and hiring insights through a clean exploratory interface.</p>
-          <div class="project-tags">
-            <span>Python</span><span>SQL</span><span>Pandas</span><span>D3.js</span>
+            <span>Next.js 14</span><span>FastAPI</span><span>Claude API</span><span>MLflow</span><span>Celery</span><span>Redis</span><span>PostgreSQL</span><span>XGBoost</span>
           </div>
           <div class="project-link">Visit live site →</div>
         </a>
 
         <a class="project-card" href="https://price-intelligence-nine.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(255,224,168,.65);">
           <div class="project-top">
-            <div class="project-badge">Pricing Intelligence</div>
-            <div class="project-index">04</div>
+            <div class="project-badge">Marketplace Data Pipeline</div>
+            <div class="project-index">03</div>
           </div>
           <h3>Price Intelligence</h3>
-          <p>A pricing analytics pipeline that tracks marketplace movement, surfaces anomalies, and converts competitive product data into dependable business intelligence.</p>
+          <p>Engineered an end-to-end batch pipeline ingesting 10,000+ product listings per day across 3 marketplace sources with Airflow scheduling, freshness monitoring, a 3-layer dbt architecture, 25+ data quality tests, and anomaly alerts for price swings above 30%.</p>
           <div class="project-tags">
-            <span>Airflow</span><span>dbt</span><span>BigQuery</span><span>Slack Alerts</span>
+            <span>Python</span><span>Airflow</span><span>dbt</span><span>BigQuery</span><span>Slack API</span>
           </div>
           <div class="project-link">Visit live site →</div>
         </a>
 
-        <a class="project-card" href="https://dataforge-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(186,196,255,.44);">
+        <a class="project-card" href="https://tech-job-market-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(184,239,217,.55);">
           <div class="project-top">
-            <div class="project-badge">Data Platform</div>
+            <div class="project-badge">Job Market Analytics Pipeline</div>
+            <div class="project-index">04</div>
+          </div>
+          <h3>Job Market Intelligence</h3>
+          <p>Built an end-to-end analytics pipeline processing 2,500+ job postings across 8 role categories with custom skill normalization covering 40+ technology aliases, 12 statistical analyses, and a zero-dependency dashboard with live filtering across 5 dimensions and 9 chart types.</p>
+          <div class="project-tags">
+            <span>Python</span><span>SQL</span><span>Pandas</span><span>D3.js</span>
+          </div>
+          <div class="project-link">Visit live site →</div>
+        </a>
+
+        <a class="project-card" href="https://frontend-chi-five-tourhxrkfk.vercel.app/" target="_blank" rel="noopener noreferrer" style="--tone: rgba(255,199,216,.48);">
+          <div class="project-top">
+            <div class="project-badge">AI Productivity Agent</div>
             <div class="project-index">05</div>
           </div>
-          <h3>DataForge</h3>
-          <p>A data tooling platform focused on turning raw inputs into clean, structured, analysis-ready assets through a workflow that feels efficient and easy to trust.</p>
+          <h3>PocketPal</h3>
+          <p>Built an AI agent-based productivity assistant with REST API-driven modular workflows for habit tracking, preference persistence, and task management, using an extensible backend that supports multi-LLM integration, RAG/vector memory, and future analytics dashboards.</p>
           <div class="project-tags">
-            <span>Data Workflows</span><span>Product UX</span><span>Web App</span>
+            <span>FastAPI</span><span>React</span><span>Next.js</span><span>LLMs</span><span>RAG</span><span>LangChain</span>
           </div>
           <div class="project-link">Visit live site →</div>
         </a>
