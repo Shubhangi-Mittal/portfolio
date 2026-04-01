@@ -197,7 +197,11 @@
       transition:.25s ease;
     }
     .nav-links a:hover{background:rgba(255,255,255,.78);color:var(--text);transform:translateY(-1px)}
-    .nav-links a.active{background:rgba(255,255,255,.82);color:var(--text);box-shadow:inset 0 0 0 1px rgba(19,32,51,.06)}
+    .nav-links a.active{
+      background:linear-gradient(135deg, rgba(127,167,255,.22), rgba(255,199,216,.30));
+      color:#183050;
+      box-shadow:inset 0 0 0 1px rgba(127,167,255,.18), 0 10px 24px rgba(127,167,255,.12);
+    }
 
     .hero{
       padding:60px 58px;
@@ -532,6 +536,74 @@
 
     .skill-list,.soft-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
     .skill-list span,.soft-list span{padding:10px 14px;border-radius:999px;background:rgba(19,32,51,.055);color:#4d5c73;font-weight:700;font-size:.84rem}
+
+    .tool-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:18px;
+    }
+    .tool-item{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px;
+      border-radius:20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.62));
+      border:1px solid rgba(19,32,51,.06);
+      box-shadow:0 10px 24px rgba(20,35,71,.06);
+    }
+    .tool-icon{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      font-size:.8rem;
+      font-weight:800;
+      letter-spacing:-0.02em;
+      color:#213856;
+      background:linear-gradient(135deg, rgba(127,167,255,.26), rgba(255,199,216,.32));
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);
+      flex-shrink:0;
+    }
+    .tool-copy strong{
+      display:block;
+      font-size:.92rem;
+      letter-spacing:-0.02em;
+      margin-bottom:2px;
+    }
+    .tool-copy span{
+      display:block;
+      color:var(--muted);
+      font-size:.8rem;
+      line-height:1.35;
+    }
+
+    .mini-stack{
+      margin-top:18px;
+      display:grid;
+      gap:12px;
+    }
+    .mini-stack-block{
+      padding:16px;
+      border-radius:20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.76), rgba(255,255,255,.62));
+      border:1px solid rgba(19,32,51,.06);
+    }
+    .mini-stack-label{
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:#72839a;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+    .mini-stack-text{
+      color:var(--text);
+      font-size:.92rem;
+      line-height:1.5;
+    }
 
     .panel h3{font-size:1.45rem;letter-spacing:-0.04em;margin-bottom:8px}
     .panel p{color:var(--muted)}
@@ -930,19 +1002,57 @@
       <div class="bento">
         <div class="panel">
           <h3>Technical skills</h3>
-          <p>Languages, data platforms, cloud infrastructure, analytics tooling, and AI frameworks used across my projects and academic work.</p>
-          <div class="skill-list">
-            <span>Python</span><span>SQL</span><span>Java</span><span>R</span><span>C/C++</span>
-            <span>JavaScript</span><span>Shell Scripting</span><span>Airflow</span><span>Spark</span><span>Kafka</span>
-            <span>dbt</span><span>Databricks</span><span>BigQuery</span><span>Snowflake</span><span>PostgreSQL</span>
-            <span>MySQL</span><span>MongoDB</span><span>GCP</span><span>AWS</span><span>Docker</span>
-            <span>Kubernetes</span><span>Tableau</span><span>Power BI</span><span>Excel</span><span>scikit-learn</span>
-            <span>LangChain</span><span>LLMs</span><span>RAG</span><span>FastAPI</span><span>Spring Boot</span><span>React/Next.js</span>
+          <p>Core tools I reach for most often across data engineering, analytics, cloud workflows, and applied AI delivery.</p>
+          <div class="tool-grid">
+            <div class="tool-item">
+              <div class="tool-icon">Py</div>
+              <div class="tool-copy"><strong>Python & SQL</strong><span>Data pipelines, analytics, ETL, and modeling foundations.</span></div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">AF</div>
+              <div class="tool-copy"><strong>Airflow & dbt</strong><span>Orchestration, transformations, testing, and reliable ELT flows.</span></div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">BQ</div>
+              <div class="tool-copy"><strong>BigQuery & Snowflake</strong><span>Warehouse-first analytics, marts, and scalable reporting layers.</span></div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">GC</div>
+              <div class="tool-copy"><strong>GCP & AWS</strong><span>Cloud storage, compute, deployment, and production-ready data systems.</span></div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">BI</div>
+              <div class="tool-copy"><strong>Tableau & Power BI</strong><span>Decision-support dashboards built for business users and operators.</span></div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">AI</div>
+              <div class="tool-copy"><strong>LLMs, RAG & FastAPI</strong><span>Applied AI products, agents, APIs, and lightweight intelligent workflows.</span></div>
+            </div>
+          </div>
+          <div class="mini-stack">
+            <div class="mini-stack-block">
+              <div class="mini-stack-label">Additional Languages & Frameworks</div>
+              <div class="mini-stack-text">Java, R, C/C++, JavaScript, Shell scripting, Spring Boot, and React/Next.js for systems, APIs, and frontend-backed tooling.</div>
+            </div>
+            <div class="mini-stack-block">
+              <div class="mini-stack-label">Platform & Data Infrastructure</div>
+              <div class="mini-stack-text">Spark, Kafka, Databricks, PostgreSQL, MySQL, MongoDB, Docker, Kubernetes, Excel, and scikit-learn for scalable processing and analysis support.</div>
+            </div>
           </div>
         </div>
         <div class="panel">
           <h3>Working style</h3>
           <p>I value ownership over titles, listen first, speak with intent, and collaborate openly while delivering quality work with autonomy in ambiguous environments.</p>
+          <div class="mini-stack">
+            <div class="mini-stack-block">
+              <div class="mini-stack-label">How I Work</div>
+              <div class="mini-stack-text">I thrive in fast-moving, messy environments, adapt quickly as priorities shift, and stay focused on shipping quality work without waiting for perfect clarity.</div>
+            </div>
+            <div class="mini-stack-block">
+              <div class="mini-stack-label">How I Think</div>
+              <div class="mini-stack-text">One of my strengths is turning ambiguity into structure by taking scattered notes, partial inputs, and loose ideas and shaping them into a clear plan with actionable next steps.</div>
+            </div>
+          </div>
           <div class="soft-list">
             <span>Ownership</span><span>Autonomy</span><span>Adaptability</span><span>Structured thinking</span><span>Open collaboration</span><span>Business impact</span>
           </div>
@@ -1092,11 +1202,16 @@
     ];
     const navLinks = document.querySelectorAll('.nav-links a');
     const setActiveNav = () => {
+      const nearPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24;
+      if (nearPageBottom) {
+        navLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#contact'));
+        return;
+      }
       let activeHref = '#projects';
       navSectionMap.forEach(([href, section]) => {
         if (!section) return;
         const r = section.getBoundingClientRect();
-        if (r.top <= window.innerHeight * 0.32 && r.bottom >= window.innerHeight * 0.2) activeHref = href;
+        if (r.top <= window.innerHeight * 0.35 && r.bottom >= window.innerHeight * 0.18) activeHref = href;
       });
       navLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === activeHref));
     };
