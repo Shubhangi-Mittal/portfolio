@@ -307,14 +307,22 @@
 
     .section-kicker{color:#5d78a3;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:800;margin-bottom:12px}
 
-    .projects-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:24px;
+      align-items:stretch;
+    }
 
     .project-card{
       grid-column:span 6;
-      padding:28px;
-      min-height:300px;
-      border-radius:28px;
-      background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.7));
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      padding:28px 28px 26px;
+      min-height:320px;
+      border-radius:30px;
+      background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,.72));
       border:1px solid rgba(255,255,255,.75);
       box-shadow:var(--shadow-soft);
       text-decoration:none;
@@ -326,9 +334,10 @@
     }
     .project-card.visible{opacity:1;transform:translateY(0)}
     .project-card:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(20,35,71,.14);border-color:rgba(127,167,255,.35)}
-    .project-card.feature{grid-column:span 7;min-height:380px}
-    .project-card.tall{grid-column:span 5;min-height:380px}
-    .project-card.pocketpal-card{grid-column:span 8;min-height:380px}
+    .project-card.feature{grid-column:span 7;min-height:400px;padding:30px 30px 28px}
+    .project-card.tall{grid-column:span 5;min-height:400px;padding:30px 30px 28px}
+    .project-card.pocketpal-card{grid-column:span 8;min-height:400px;padding:30px 30px 28px}
+
 
     .accent-card{
       grid-column:span 4;
@@ -429,7 +438,13 @@
     }
     .project-card:hover::before{transform:scale(1.12)}
 
-    .project-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
+    .project-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:4px;
+    }
 
     .project-badge{
       display:inline-flex;align-items:center;gap:8px;
@@ -441,13 +456,40 @@
 
     .project-index{font-family:'JetBrains Mono',monospace;color:#92a0b3;font-size:.82rem}
 
-    .project-card h3{font-size:1.78rem;letter-spacing:-0.05em;margin-bottom:12px;max-width:420px;line-height:1.05}
-    .project-card p{color:var(--muted);max-width:560px;font-size:.98rem;line-height:1.68}
+    .project-card h3{
+      font-size:1.78rem;
+      letter-spacing:-0.05em;
+      margin-bottom:2px;
+      max-width:420px;
+      line-height:1.05;
+    }
+    .project-card p{
+      color:var(--muted);
+      max-width:560px;
+      font-size:.98rem;
+      line-height:1.68;
+      margin-bottom:0;
+      flex:1;
+    }
 
-    .project-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-    .project-tags span{padding:8px 11px;border-radius:999px;background:rgba(19,32,51,.055);font-size:.77rem;color:#54657d;font-weight:700}
+    .project-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:8px;
+      padding-top:2px;
+    }
+    .project-tags span{padding:9px 12px;border-radius:999px;background:rgba(19,32,51,.055);font-size:.77rem;color:#54657d;font-weight:700}
 
-    .project-link{margin-top:24px;display:inline-flex;align-items:center;gap:10px;font-weight:800;text-decoration:none}
+    .project-link{
+      margin-top:8px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      text-decoration:none;
+      color:#1c3357;
+    }
 
     .advisor{
       display:grid;
@@ -938,6 +980,19 @@
             </svg>
           </div>
         </div>
+
+        <a class="project-card" href="https://github.com/&lt;your-username&gt;/nyc-taxi-weather-lakehouse" target="_blank" rel="noopener noreferrer" style="--tone:rgba(150,200,255,.5);grid-column:span 12">
+          <div class="project-top">
+            <div class="project-badge">Dual-Cloud Data Lakehouse</div>
+            <div class="project-index">06</div>
+          </div>
+          <h3>NYC Taxi &amp; Weather Lakehouse</h3>
+          <p>An end-to-end medallion lakehouse joining 3M+ NYC taxi trips with hourly weather, running identically on a local open-source stack (MinIO, Spark, Apache Iceberg) and on BigQuery from a single dbt project. Orchestrated with Airflow and guarded by Great Expectations plus dbt tests &mdash; and it surfaced a clear behavioral signal: riders tip ~3 points higher in the rain.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Spark</span><span>Apache Iceberg</span><span>dbt</span><span>Airflow</span><span>Great Expectations</span><span>BigQuery</span><span>MinIO</span>
+          </div>
+          <div class="project-link">View on GitHub &rarr;</div>
+        </a>
 
       </div>
     </section>
